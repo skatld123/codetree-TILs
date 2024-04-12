@@ -14,7 +14,7 @@ for _ in range(n):
         print(name)
 
 if len(students) > 1:
-    sorted(students, key=lambda x : x[1])
+    students = dict(sorted(students.items(), key=lambda x : x[1]))
     mim = 0
     second = []
     for idx, (k, v) in enumerate(students.items()):
@@ -23,7 +23,6 @@ if len(students) > 1:
             if second and second[0][1] != v:
                 break
             second.append([k, v])
-
     if not second or len(second) > 1:
         print("Tie")
     else:
