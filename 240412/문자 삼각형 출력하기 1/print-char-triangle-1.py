@@ -9,9 +9,12 @@ for i in range(n):
         if start <= 90:
             graph[j][i] = chr(start)
             start += 1
-        else: start = 65
+        else: 
+            start = 65
+            graph[j][i] = chr(start)
+            start += 1
 
 for line in graph:
-    line.sort()
+    line.sort(key=lambda x: 0 if x == ' ' else 1)
     lstring = ' '.join(line) 
     print(lstring)
