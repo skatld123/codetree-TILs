@@ -27,4 +27,4 @@ if len(students) > 1:
     if not second or len(second) > 1:
         print("Tie")
     else:
-        print(second[0])
+        print(second[0][0])
