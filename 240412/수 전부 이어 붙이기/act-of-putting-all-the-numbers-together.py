@@ -9,8 +9,11 @@ nstring = ''.join(nlist)
 quo = len(nstring)//5
 remainder = len(nstring)%5
 
-for i in range(quo):
-    j = i * 5
-    print(nstring[j:j+5])
-    if i == (quo - 1):
-        print(nstring[j+5:])
+if quo > 0:
+    for i in range(quo):
+        j = i * 5
+        print(nstring[j:j+5])
+        if i == (quo - 1):
+            print(nstring[j+5:])   
+else:
+    print(nstring)
